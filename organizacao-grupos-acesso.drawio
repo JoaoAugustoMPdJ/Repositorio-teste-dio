@@ -1,0 +1,77 @@
+<mxfile host="app.diagrams.net" modified="2026-05-25T00:00:00.000Z" agent="ChatGPT" version="24.7.17" type="device">
+  <diagram id="organizacao-grupos-acesso" name="Organização e Acessos">
+    <mxGraphModel dx="1422" dy="794" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="1060" math="0" shadow="0">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+        <mxCell id="title" value="Organização e Grupos de Acesso" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=none;fontSize=24;fontStyle=1;align=center;" vertex="1" edge="0" parent="1"><mxGeometry x="260" y="20" width="600" height="40" as="geometry"/></mxCell>
+        <mxCell id="org_title" value="Organograma da Organização" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1f4e79;fontColor=#ffffff;strokeColor=#17365d;fontStyle=1;align=center;verticalAlign=middle;" vertex="1" edge="0" parent="1"><mxGeometry x="40" y="90" width="390" height="45" as="geometry"/></mxCell>
+        <mxCell id="dir" value="Diretoria Geral" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontStyle=1;align=center;verticalAlign=middle;" vertex="1" edge="0" parent="1"><mxGeometry x="170" y="160" width="140" height="55" as="geometry"/></mxCell>
+        <mxCell id="ti" value="TI / Infraestrutura" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#eaf2f8;strokeColor=#6c8ebf;align=center;verticalAlign=middle;" vertex="1" edge="0" parent="1"><mxGeometry x="40" y="270" width="150" height="55" as="geometry"/></mxCell>
+        <mxCell id="adm" value="Administração" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#eaf2f8;strokeColor=#6c8ebf;align=center;verticalAlign=middle;" vertex="1" edge="0" parent="1"><mxGeometry x="215" y="270" width="150" height="55" as="geometry"/></mxCell>
+        <mxCell id="rh" value="Recursos Humanos" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#eaf2f8;strokeColor=#6c8ebf;align=center;verticalAlign=middle;" vertex="1" edge="0" parent="1"><mxGeometry x="390" y="270" width="150" height="55" as="geometry"/></mxCell>
+        <mxCell id="fin" value="Financeiro" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#eaf2f8;strokeColor=#6c8ebf;align=center;verticalAlign=middle;" vertex="1" edge="0" parent="1"><mxGeometry x="40" y="390" width="150" height="55" as="geometry"/></mxCell>
+        <mxCell id="ven" value="Vendas" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#eaf2f8;strokeColor=#6c8ebf;align=center;verticalAlign=middle;" vertex="1" edge="0" parent="1"><mxGeometry x="215" y="390" width="150" height="55" as="geometry"/></mxCell>
+        <mxCell id="sec" value="Secretaria" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#eaf2f8;strokeColor=#6c8ebf;align=center;verticalAlign=middle;" vertex="1" edge="0" parent="1"><mxGeometry x="390" y="390" width="150" height="55" as="geometry"/></mxCell>
+        <mxCell id="e1" style="endArrow=block;html=1;rounded=0;strokeWidth=2;" vertex="0" edge="1" parent="1" source="dir" target="ti"><mxGeometry relative="1" as="geometry"></mxGeometry></mxCell>
+        <mxCell id="e2" style="endArrow=block;html=1;rounded=0;strokeWidth=2;" vertex="0" edge="1" parent="1" source="dir" target="adm"><mxGeometry relative="1" as="geometry"></mxGeometry></mxCell>
+        <mxCell id="e3" style="endArrow=block;html=1;rounded=0;strokeWidth=2;" vertex="0" edge="1" parent="1" source="dir" target="rh"><mxGeometry relative="1" as="geometry"></mxGeometry></mxCell>
+        <mxCell id="e4" style="endArrow=block;html=1;rounded=0;strokeWidth=2;" vertex="0" edge="1" parent="1" source="adm" target="fin"><mxGeometry relative="1" as="geometry"></mxGeometry></mxCell>
+        <mxCell id="e5" style="endArrow=block;html=1;rounded=0;strokeWidth=2;" vertex="0" edge="1" parent="1" source="adm" target="ven"><mxGeometry relative="1" as="geometry"></mxGeometry></mxCell>
+        <mxCell id="e6" style="endArrow=block;html=1;rounded=0;strokeWidth=2;" vertex="0" edge="1" parent="1" source="adm" target="sec"><mxGeometry relative="1" as="geometry"></mxGeometry></mxCell>
+        <mxCell id="acc_title" value="Grupos de Acesso e Permissões" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1f4e79;fontColor=#ffffff;strokeColor=#17365d;fontStyle=1;align=center;verticalAlign=middle;" vertex="1" edge="0" parent="1"><mxGeometry x="620" y="90" width="500" height="45" as="geometry"/></mxCell>
+        <mxCell id="policy" value="Política de acesso baseada em grupos
+RBAC — Role-Based Access Control" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontStyle=1;align=center;verticalAlign=middle;" vertex="1" edge="0" parent="1"><mxGeometry x="770" y="155" width="210" height="65" as="geometry"/></mxCell>
+        <mxCell id="grp_ti" value="GRP_TI
+Equipe de TI" style="group" vertex="1" edge="0" parent="1"><mxGeometry x="600" y="270" width="140" height="60" as="geometry"/></mxCell>
+        <mxCell id="grp_adm" value="GRP_ADM
+Administração" style="group" vertex="1" edge="0" parent="1"><mxGeometry x="760" y="270" width="140" height="60" as="geometry"/></mxCell>
+        <mxCell id="grp_rh" value="GRP_RH
+Recursos Humanos" style="group" vertex="1" edge="0" parent="1"><mxGeometry x="920" y="270" width="140" height="60" as="geometry"/></mxCell>
+        <mxCell id="grp_fin" value="GRP_FIN
+Financeiro" style="group" vertex="1" edge="0" parent="1"><mxGeometry x="600" y="390" width="140" height="60" as="geometry"/></mxCell>
+        <mxCell id="grp_ven" value="GRP_VEN
+Vendas" style="group" vertex="1" edge="0" parent="1"><mxGeometry x="760" y="390" width="140" height="60" as="geometry"/></mxCell>
+        <mxCell id="grp_sec" value="GRP_SEC
+Secretaria" style="group" vertex="1" edge="0" parent="1"><mxGeometry x="920" y="390" width="140" height="60" as="geometry"/></mxCell>
+        <mxCell id="p1" value="membro" style="endArrow=block;html=1;rounded=0;dashed=1;strokeWidth=2;" vertex="0" edge="1" parent="1" source="policy" target="grp_ti"><mxGeometry relative="1" as="geometry"></mxGeometry></mxCell>
+        <mxCell id="p2" value="membro" style="endArrow=block;html=1;rounded=0;dashed=1;strokeWidth=2;" vertex="0" edge="1" parent="1" source="policy" target="grp_adm"><mxGeometry relative="1" as="geometry"></mxGeometry></mxCell>
+        <mxCell id="p3" value="membro" style="endArrow=block;html=1;rounded=0;dashed=1;strokeWidth=2;" vertex="0" edge="1" parent="1" source="policy" target="grp_rh"><mxGeometry relative="1" as="geometry"></mxGeometry></mxCell>
+        <mxCell id="p4" value="membro" style="endArrow=block;html=1;rounded=0;dashed=1;strokeWidth=2;" vertex="0" edge="1" parent="1" source="policy" target="grp_fin"><mxGeometry relative="1" as="geometry"></mxGeometry></mxCell>
+        <mxCell id="p5" value="membro" style="endArrow=block;html=1;rounded=0;dashed=1;strokeWidth=2;" vertex="0" edge="1" parent="1" source="policy" target="grp_ven"><mxGeometry relative="1" as="geometry"></mxGeometry></mxCell>
+        <mxCell id="p6" value="membro" style="endArrow=block;html=1;rounded=0;dashed=1;strokeWidth=2;" vertex="0" edge="1" parent="1" source="policy" target="grp_sec"><mxGeometry relative="1" as="geometry"></mxGeometry></mxCell>
+        <mxCell id="res_title" value="Recursos / Diretórios do Servidor" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1f4e79;fontColor=#ffffff;strokeColor=#17365d;fontStyle=1;align=center;verticalAlign=middle;" vertex="1" edge="0" parent="1"><mxGeometry x="235" y="520" width="690" height="45" as="geometry"/></mxCell>
+        <mxCell id="pub" value="/publico
+Todos: leitura e escrita
+Permissão: 777" style="shape=folder;tabWidth=40;tabHeight=14;tabPosition=left;html=1;whiteSpace=wrap;fillColor=#fff2cc;strokeColor=#d6b656;align=center;verticalAlign=middle;" vertex="1" edge="0" parent="1"><mxGeometry x="70" y="620" width="180" height="75" as="geometry"/></mxCell>
+        <mxCell id="adm_dir" value="/adm
+GRP_ADM: acesso total
+Permissão: 770" style="shape=folder;tabWidth=40;tabHeight=14;tabPosition=left;html=1;whiteSpace=wrap;fillColor=#fff2cc;strokeColor=#d6b656;align=center;verticalAlign=middle;" vertex="1" edge="0" parent="1"><mxGeometry x="310" y="620" width="180" height="75" as="geometry"/></mxCell>
+        <mxCell id="rh_dir" value="/rh
+GRP_RH: acesso total
+Permissão: 770" style="shape=folder;tabWidth=40;tabHeight=14;tabPosition=left;html=1;whiteSpace=wrap;fillColor=#fff2cc;strokeColor=#d6b656;align=center;verticalAlign=middle;" vertex="1" edge="0" parent="1"><mxGeometry x="550" y="620" width="180" height="75" as="geometry"/></mxCell>
+        <mxCell id="fin_dir" value="/financeiro
+GRP_FIN: acesso total
+Permissão: 770" style="shape=folder;tabWidth=40;tabHeight=14;tabPosition=left;html=1;whiteSpace=wrap;fillColor=#fff2cc;strokeColor=#d6b656;align=center;verticalAlign=middle;" vertex="1" edge="0" parent="1"><mxGeometry x="790" y="620" width="180" height="75" as="geometry"/></mxCell>
+        <mxCell id="ven_dir" value="/vendas
+GRP_VEN: acesso total
+Permissão: 770" style="shape=folder;tabWidth=40;tabHeight=14;tabPosition=left;html=1;whiteSpace=wrap;fillColor=#fff2cc;strokeColor=#d6b656;align=center;verticalAlign=middle;" vertex="1" edge="0" parent="1"><mxGeometry x="310" y="760" width="180" height="75" as="geometry"/></mxCell>
+        <mxCell id="sec_dir" value="/secretaria
+GRP_SEC: acesso total
+Permissão: 770" style="shape=folder;tabWidth=40;tabHeight=14;tabPosition=left;html=1;whiteSpace=wrap;fillColor=#fff2cc;strokeColor=#d6b656;align=center;verticalAlign=middle;" vertex="1" edge="0" parent="1"><mxGeometry x="550" y="760" width="180" height="75" as="geometry"/></mxCell>
+        <mxCell id="a1" value="acesso" style="endArrow=block;html=1;rounded=0;strokeColor=#2E7D32;strokeWidth=2;" vertex="0" edge="1" parent="1" source="grp_adm" target="adm_dir"><mxGeometry relative="1" as="geometry"></mxGeometry></mxCell>
+        <mxCell id="a2" value="acesso" style="endArrow=block;html=1;rounded=0;strokeColor=#2E7D32;strokeWidth=2;" vertex="0" edge="1" parent="1" source="grp_rh" target="rh_dir"><mxGeometry relative="1" as="geometry"></mxGeometry></mxCell>
+        <mxCell id="a3" value="acesso" style="endArrow=block;html=1;rounded=0;strokeColor=#2E7D32;strokeWidth=2;" vertex="0" edge="1" parent="1" source="grp_fin" target="fin_dir"><mxGeometry relative="1" as="geometry"></mxGeometry></mxCell>
+        <mxCell id="a4" value="acesso" style="endArrow=block;html=1;rounded=0;strokeColor=#2E7D32;strokeWidth=2;" vertex="0" edge="1" parent="1" source="grp_ven" target="ven_dir"><mxGeometry relative="1" as="geometry"></mxGeometry></mxCell>
+        <mxCell id="a5" value="acesso" style="endArrow=block;html=1;rounded=0;strokeColor=#2E7D32;strokeWidth=2;" vertex="0" edge="1" parent="1" source="grp_sec" target="sec_dir"><mxGeometry relative="1" as="geometry"></mxGeometry></mxCell>
+        <mxCell id="a6" value="acesso" style="endArrow=block;html=1;rounded=0;strokeColor=#2E7D32;strokeWidth=2;" vertex="0" edge="1" parent="1" source="grp_ti" target="pub"><mxGeometry relative="1" as="geometry"></mxGeometry></mxCell>
+        <mxCell id="pub_edge" value="acesso público" style="endArrow=block;html=1;rounded=0;dashed=1;strokeColor=#d79b00;strokeWidth=2;" vertex="0" edge="1" parent="1" source="policy" target="pub"><mxGeometry relative="1" as="geometry"></mxGeometry></mxCell>
+        <mxCell id="note" value="Observações:
+1. Usuários são adicionados aos grupos conforme o setor.
+2. Cada grupo acessa apenas seu diretório.
+3. O diretório /publico é compartilhado por todos.
+4. A equipe de TI administra infraestrutura e suporte." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;align=left;spacingLeft=12;verticalAlign=middle;" vertex="1" edge="0" parent="1"><mxGeometry x="60" y="900" width="1030" height="105" as="geometry"/></mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
