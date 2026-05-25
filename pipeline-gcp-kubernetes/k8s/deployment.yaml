@@ -1,0 +1,31 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: app-gcp-kubernetes
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: app-gcp-kubernetes
+  template:
+    metadata:
+      labels:
+        app: app-gcp-kubernetes
+    spec:
+      containers:
+        - name: app-gcp-kubernetes
+          image: IMAGE_PLACEHOLDER
+          ports:
+            - containerPort: 8080
+          readinessProbe:
+            httpGet:
+              path: /health
+              port: 8080
+            initialDelaySeconds: 5
+            periodSeconds: 10
+          livenessProbe:
+            httpGet:
+              path: /health
+              port: 8080
+            initialDelaySeconds: 10
+            periodSeconds: 15

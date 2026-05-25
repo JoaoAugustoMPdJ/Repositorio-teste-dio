@@ -1,0 +1,42 @@
+steps:
+  - name: "gcr.io/cloud-builders/docker"
+    id: "Build da imagem Docker"
+    args:
+      - "build"
+      - "-t"
+      - "${_REGION}-docker.pkg.dev/$PROJECT_ID/${_REPOSITORY}/${_IMAGE}:$SHORT_SHA"
+      - "."
+
+  - name: "gcr.io/cloud-builders/docker"
+    id: "Push da imagem para o Artifact Registry"
+    args:
+      - "push"
+      - "${_REGION}-docker.pkg.dev/$PROJECT_ID/${_REPOSITORY}/${_IMAGE}:$SHORT_SHA"
+
+  - name: "gcr.io/cloud-builders/gcloud"
+    id: "Conectando ao cluster GKE"
+    entrypoint: "bash"
+    args:
+      - "-c"
+      - |
+        gcloud container clusters get-credentials ${_CLUSTER} \
+          --region ${_REGION} \
+          --project $PROJECT_ID
+
+  - name: "gcr.io/cloud-builders/kubectl"
+    id: "Deploy no Kubernetes"
+    entrypoint: "bash"
+    args:
+      - "-c"
+      - |
+        sed -i "s|IMAGE_PLACEHOLDER|${_REGION}-docker.pkg.dev/$PROJECT_ID/${_REPOSITORY}/${_IMAGE}:$SHORT_SHA|g" k8s/deployment.yaml
+        kubectl apply -f k8s/
+
+images:
+  - "${_REGION}-docker.pkg.dev/$PROJECT_ID/${_REPOSITORY}/${_IMAGE}:$SHORT_SHA"
+
+substitutions:
+  _REGION: "us-central1"
+  _REPOSITORY: "app-repository"
+  _IMAGE: "app-gcp-kubernetes"
+  _CLUSTER: "cluster-producao"
