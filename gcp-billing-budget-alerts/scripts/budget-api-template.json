@@ -1,0 +1,37 @@
+{
+  "displayName": "orcamento-laboratorio-gcp",
+  "budgetFilter": {
+    "calendarPeriod": "MONTH",
+    "projects": [
+      "projects/SEU_PROJECT_NUMBER"
+    ]
+  },
+  "amount": {
+    "specifiedAmount": {
+      "currencyCode": "BRL",
+      "units": "50"
+    }
+  },
+  "thresholdRules": [
+    {
+      "thresholdPercent": 0.5,
+      "spendBasis": "CURRENT_SPEND"
+    },
+    {
+      "thresholdPercent": 0.75,
+      "spendBasis": "CURRENT_SPEND"
+    },
+    {
+      "thresholdPercent": 0.9,
+      "spendBasis": "CURRENT_SPEND"
+    },
+    {
+      "thresholdPercent": 1.0,
+      "spendBasis": "CURRENT_SPEND"
+    },
+    {
+      "thresholdPercent": 1.0,
+      "spendBasis": "FORECASTED_SPEND"
+    }
+  ]
+}
